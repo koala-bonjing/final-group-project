@@ -15,10 +15,10 @@ interface MealsState {
 const initialState: MealsState = {
   people: 0,
   meals: [
-    { name: "Buffet Lunch", pricePerPerson: 250, selected: false },
-    { name: "Cocktail Dinner", pricePerPerson: 350, selected: false },
-    { name: "Snacks & Beverages", pricePerPerson: 100, selected: false },
-    { name: "Full-course Meal", pricePerPerson: 500, selected: false },
+    { name: "Buffet Lunch", pricePerPerson: 25, selected: false },
+    { name: "Cocktail Dinner", pricePerPerson: 35, selected: false },
+    { name: "Snacks & Beverages", pricePerPerson: 10, selected: false },
+    { name: "Full-course Meal", pricePerPerson: 50, selected: false },
   ],
 };
 

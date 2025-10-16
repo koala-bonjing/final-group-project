@@ -1,11 +1,14 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import type { RootState } from "../store";
+import type { RootState } from "../store/store";
 import { setPeople, toggleMeal } from "../slices/mealData";
 
 function MealsPage() {
   const dispatch = useDispatch();
   const { meals, people } = useSelector((state: RootState) => state.mealsData);
+  {
+    console.log(meals);
+  }
 
   const subtotal = meals
     .filter((m: any) => m.selected)
@@ -29,7 +32,7 @@ function MealsPage() {
           className="border border-gray-300 rounded-lg px-3 py-1"
         >
           <option value={0}>Select</option>
-          {[...Array(20)].map((_, i) => (
+          {[...Array(50)].map((_, i) => (
             <option key={i + 1} value={i + 1}>
               {i + 1}
             </option>

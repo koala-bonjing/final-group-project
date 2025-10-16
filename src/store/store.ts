@@ -1,7 +1,7 @@
 // store.ts
 import { configureStore } from "@reduxjs/toolkit";
 import { loadState, saveState } from "../utils/stateLoader";
-import venueReducer from "../venueData";
+import venueReducer from "../slices/venueData";
 import mealsReducer from "../slices/mealData";
 import addonsReducer from "../slices/addonsData";
 
