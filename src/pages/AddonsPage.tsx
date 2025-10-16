@@ -8,7 +8,7 @@ function AddonsPage() {
 
   // compute subtotal
   const subtotal = addons.reduce(
-    (acc: any, addon: any) => acc + addn.price * addon.quantity,
+    (acc: any, addon: any) => acc + addon.price * addon.quantity,
     0
   );
 
@@ -22,7 +22,7 @@ function AddonsPage() {
       </div>
 
       <div className="grid grid-cols-3 gap-6">
-        {addons.map((addon, i) => (
+        {addons.map((addon: any, i: number) => (
           <div
             key={i}
             className="border p-6 rounded-2xl shadow-md hover:shadow-lg transition w-80"

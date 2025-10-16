@@ -8,8 +8,8 @@ function MealsPage() {
   const { meals, people } = useSelector((state: RootState) => state.mealsData);
 
   const subtotal = meals
-    .filter((m) => m.selected)
-    .reduce((acc, meal) => acc + meal.pricePerPerson * people, 0);
+    .filter((m: any) => m.selected)
+    .reduce((acc: any, meal: any) => acc + meal.pricePerPerson * people, 0);
 
   return (
     <div className="flex flex-col items-center justify-start min-h-screen pt-24">
@@ -39,7 +39,7 @@ function MealsPage() {
 
       {/* Meals List */}
       <div className="grid grid-cols-3 gap-6">
-        {meals.map((meal, index) => (
+        {meals.map((meal: any, index: number) => (
           <div
             key={index}
             className={`border p-6 rounded-2xl shadow-md cursor-pointer ${
